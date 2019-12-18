@@ -1,0 +1,33 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+yapf = "*"
+pylint = "*"
+
+[packages]
+pandas = "*"
+numpy = "*"
+aiodns = "*"
+aiohttp = "*"
+aiofiles = "*"
+pytest = "*"
+pyyaml = "*"
+requests = "*"
+tensorflow-gpu = "*"
+# don't know why we need pillow, but tensorflow needs it.
+pillow = "*"
+scipy = "*"
+scikit-learn = "*"
+imbalanced-learn = "*"
+ipython = "*"
+jupyterlab = "*"
+nest-asyncio = "*" # otherwise asyncio des not work in Jupyter Lab
+matplotlib = "*"
+shapely = "*"
+xlrd = "*"
+
+[requires]
+python_version = "3.7.4"

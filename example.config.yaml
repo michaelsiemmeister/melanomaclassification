@@ -1,0 +1,33 @@
+metadata_path: './metadata/'
+# metadata_path: '../melanomaclassification_metadata/'
+
+download_images:
+  images_base_path: "../Images/"
+  isic_images_metadata_filename: "ISIC_images_metadata.csv"
+  MClass_metadata_filename: "MClass_DermoscopicNameSource.csv"
+  isbi2016_test_metadata_filename: "ISBI2016_ISIC_Part3_Test_GroundTruth.csv"
+
+models_path: "../models"
+model_name: "default_name"
+
+log_path: "../logs"
+log_name: "history"
+
+validation_size: 200 # float - percentage, or int - absolute count
+testing_size: 100 # float - percentage, or int - absolute count
+
+random_seeds:
+  built_in: 1
+  numpy: 1
+  tensorflow: 1
+  training_datagenerator_flow_df: 1
+
+# ISIC specific settings. should not be changed.
+id_column: "download_name"
+category_column: "meta_clinical_benign_malignant"
+
+batch_size: 10
+
+# if True the model will just be trained with 3 batches.
+# just for testing, if the training workflow actually works.
+workflow_testing: True
